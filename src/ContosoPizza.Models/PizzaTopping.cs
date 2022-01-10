@@ -2,19 +2,19 @@ namespace ContosoPizza.Models;
 
 public enum PizzaTopping
 {
-    Pepperoni,
-    Sausage,
-    Meatball,
     Bacon,
-    Ham,
+    BananaPeppers,
     Chicken,
-    Mushrooms,
-    Onions,
-    Olives,
-    Pineapple,
-    Spinach,
-    Tomatoes,
     GreenPeppers,
+    Ham,
     Jalapenos,
-    BananaPeppers
+    Meatball,
+    Mushrooms,
+    Olives,
+    Onions,
+    Pepperoni,
+    Pineapple,
+    Sausage,
+    Spinach,
+    Tomatoes
 };

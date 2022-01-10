@@ -1,8 +1,7 @@
 ﻿using ContosoPizza.Models;
 
-var pizza = new Pizza()
+var pizza = new Pizza("Pepperoni Special")
 {
-    Name = "Pepperoni Special",
     Size = PizzaSize.Medium,
     Crust = PizzaCrust.DeepDish,
     Sauce = PizzaSauce.Marinara,
@@ -12,3 +11,13 @@ var pizza = new Pizza()
 pizza.Toppings.Add(PizzaTopping.Pepperoni);
 
 Console.WriteLine(pizza.ToString());
+
+/*
+    Output:
+    Pizza: Pepperoni Special
+    Size: Medium
+    Crust: DeepDish
+    Sauce: Marinara
+    Toppings: Pepperoni
+    Price: $17.99
+*/
