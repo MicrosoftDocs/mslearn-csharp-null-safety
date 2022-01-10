@@ -1,5 +1,6 @@
 ﻿using ContosoPizza.Models;
 
+// Create a pizza
 var pizza = new Pizza("Meat Lover's Special")
 {
     Size = PizzaSize.Medium,
@@ -8,18 +9,16 @@ var pizza = new Pizza("Meat Lover's Special")
     Price = 17.99m,
 };
 
-pizza.Cheeses = new List<PizzaCheese>();
+// Add cheeses
 pizza.Cheeses.Add(PizzaCheese.Mozzarella);
 pizza.Cheeses.Add(PizzaCheese.Parmesan);
 
-pizza.Toppings ??= new
-{
-    PizzaTopping.Sausage,
-    PizzaTopping.Pepperoni,
-    PizzaTopping.Bacon,
-    PizzaTopping.Ham,
-    PizzaTopping.Meatballs
-};
+// Add toppings
+pizza.Toppings.Add(PizzaTopping.Sausage);
+pizza.Toppings.Add(PizzaTopping.Pepperoni);
+pizza.Toppings.Add(PizzaTopping.Bacon);
+pizza.Toppings.Add(PizzaTopping.Ham);
+pizza.Toppings.Add(PizzaTopping.Meatballs);
 
 Console.WriteLine(pizza);
 
