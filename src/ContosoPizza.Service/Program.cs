@@ -12,12 +12,14 @@ pizza.Cheeses = new List<PizzaCheese>();
 pizza.Cheeses.Add(PizzaCheese.Mozzarella);
 pizza.Cheeses.Add(PizzaCheese.Parmesan);
 
-pizza.Toppings = new List<PizzaTopping>();
-pizza.Toppings.Add(PizzaTopping.Sausage);
-pizza.Toppings.Add(PizzaTopping.Pepperoni);
-pizza.Toppings.Add(PizzaTopping.Bacon);
-pizza.Toppings.Add(PizzaTopping.Ham);
-pizza.Toppings.Add(PizzaTopping.Meatballs);
+pizza.Toppings ??= new
+{
+    PizzaTopping.Sausage,
+    PizzaTopping.Pepperoni,
+    PizzaTopping.Bacon,
+    PizzaTopping.Ham,
+    PizzaTopping.Meatballs
+};
 
 Console.WriteLine(pizza);
 
