@@ -5,6 +5,5 @@ public enum PizzaSauce
     Tomato,
     Marinara,
     Alfredo,
-    BBQ,
-    Taco
+    Barbecue
 };

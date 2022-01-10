@@ -11,5 +11,8 @@ public record class Pizza([Required] string Name)
     public PizzaCrust Crust { get; set; }
     public PizzaSauce Sauce { get; set; }
 
+    public ICollection<PizzaCheese> Cheeses { get; set; }
     public ICollection<PizzaTopping> Toppings { get; set; }
+
+    public override string ToString() => this.ToDescriptiveString();
 }
