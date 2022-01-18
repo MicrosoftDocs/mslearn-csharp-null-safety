@@ -1,7 +1,7 @@
 ﻿using ContosoPizza.Models;
 
 // Create a pizza
-var pizza = new Pizza("Meat Lover's Special")
+Pizza pizza = new("Meat Lover's Special")
 {
     Size = PizzaSize.Medium,
     Crust = PizzaCrust.DeepDish,
@@ -10,10 +10,12 @@ var pizza = new Pizza("Meat Lover's Special")
 };
 
 // Add cheeses
+pizza.Cheeses = new List<PizzaCheese>();
 pizza.Cheeses.Add(PizzaCheese.Mozzarella);
 pizza.Cheeses.Add(PizzaCheese.Parmesan);
 
 // Add toppings
+pizza.Toppings = new List<PizzaTopping>();
 pizza.Toppings.Add(PizzaTopping.Sausage);
 pizza.Toppings.Add(PizzaTopping.Pepperoni);
 pizza.Toppings.Add(PizzaTopping.Bacon);
@@ -28,5 +30,5 @@ Console.WriteLine(pizza);
     The "Meat Lover's Special" is a medium crust deep dish pizza with marinara sauce.
     It's covered with mozzarella and parmesan cheese.
     It comes with sausage, pepperoni, bacon, ham, and meatballs.
-    The medium size is $17.99. Delivery is $2.50 more, bringing your total $19.49!
+    The medium size is $17.99. Delivery is $2.50 more, bringing your total $20.49!
 */

@@ -1,6 +1,6 @@
 ﻿namespace ContosoPizza.Models;
 
-public record class Pizza([Required] string Name)
+public sealed record class Pizza([Required] string Name)
 {
     public int Id { get; set; }
 
