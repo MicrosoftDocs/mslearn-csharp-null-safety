@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A61C6C7A-A61B-485E-A11E-E4D1B7F5451F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoPizza.Models", "src\ContosoPizza.Models\ContosoPizza.Models.csproj", "{F97F0F38-868C-4600-BDEF-456CF86531D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoPizza.Service", "src\ContosoPizza.Service\ContosoPizza.Service.csproj", "{C687930D-1A5D-4F69-A30F-DA0CDCEAF0AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F97F0F38-868C-4600-BDEF-456CF86531D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97F0F38-868C-4600-BDEF-456CF86531D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97F0F38-868C-4600-BDEF-456CF86531D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97F0F38-868C-4600-BDEF-456CF86531D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C687930D-1A5D-4F69-A30F-DA0CDCEAF0AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C687930D-1A5D-4F69-A30F-DA0CDCEAF0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C687930D-1A5D-4F69-A30F-DA0CDCEAF0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C687930D-1A5D-4F69-A30F-DA0CDCEAF0AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F97F0F38-868C-4600-BDEF-456CF86531D4} = {A61C6C7A-A61B-485E-A11E-E4D1B7F5451F}
+		{C687930D-1A5D-4F69-A30F-DA0CDCEAF0AF} = {A61C6C7A-A61B-485E-A11E-E4D1B7F5451F}
+	EndGlobalSection
+EndGlobal
