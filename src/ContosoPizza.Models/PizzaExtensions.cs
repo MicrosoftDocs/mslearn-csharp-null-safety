@@ -44,7 +44,7 @@ static class PizzaExtensions
 
         const decimal deliveryCharge = 2.50m;
         builder.AppendFormat(
-            "The {0} size is {1:c}. Delivery is {2:c} more, bringing your total {3:c}!",
+            "This {0} size is {1:c}. Delivery is {2:c} more, bringing your total {3:c}!",
             pizza.Size switch 
             {
                 PizzaSize.Personal => "personal",

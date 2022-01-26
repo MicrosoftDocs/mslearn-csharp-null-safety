@@ -28,5 +28,5 @@ Console.WriteLine(pizza);
     The "Meat Lover's Special" is a deep dish pizza with marinara sauce.
     It's covered with a blend of mozzarella and parmesan cheese.
     It's layered with sausage, pepperoni, bacon, ham and meatballs.
-    The medium size is $17.99. Delivery is $2.50 more, bringing your total $20.49!
+    This medium size is $17.99. Delivery is $2.50 more, bringing your total $20.49!
 */
