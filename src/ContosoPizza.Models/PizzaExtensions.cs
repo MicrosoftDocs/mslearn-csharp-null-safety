@@ -24,22 +24,26 @@ static class PizzaExtensions
 
         var cheeses = pizza.Cheeses switch
         {
-            { Count: 0 } => "",
+            { Count: 0 } => throw new InvalidOperationException("Pizza must have at least one cheese."),
             { Count: 1 } => "It's covered with ",
             { Count: _ } => "It's covered with a blend of "
         };
         builder.Append(cheeses);
-        builder.AppendCollection(pizza.Cheeses, c => c.ToString().ToLower());
+        builder.AppendCollection(
+            pizza.Cheeses,
+            cheese => cheese.ToString().ToLower());
         builder.AppendLine(" cheese.");
 
         var toppings = pizza.Toppings switch
         {
-            { Count: 0 } => "",
+            null or { Count: 0 } => "Without any toppings",
             { Count: 1 } => "It comes with ",
-            { Count: _ } => "It's layered with "
+            _ => "It's layered with "
         };
         builder.Append(toppings);
-        builder.AppendCollection(pizza.Toppings, t => t.ToString().ToLower());
+        builder.AppendCollection(
+            pizza.Toppings ?? Array.Empty<PizzaTopping>(),
+            topping => topping.ToString().ToLower());
         builder.AppendLine(".");
 
         const decimal deliveryCharge = 2.50m;
@@ -63,7 +67,7 @@ static class PizzaExtensions
         ICollection<T> source,
         Func<T, string> format)
     {
-        var array = source.ToArray();
+        var array = source.ToArray() ?? Array.Empty<T>();
         for (int i = 0; i < array.Length; ++ i)
         {
             var (isLast, isSecondToLast) = (i == array.Length - 1, i == array.Length - 2);
