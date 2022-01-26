@@ -29,7 +29,7 @@ static class PizzaExtensions
             { Count: _ } => "It's covered with a blend of "
         };
         builder.Append(cheeses);
-        builder.AppendCollection(pizza.Cheeses);
+        builder.AppendCollection(pizza.Cheeses, c => c.ToString().ToLower());
         builder.AppendLine(" cheese.");
 
         var toppings = pizza.Toppings switch
@@ -39,7 +39,7 @@ static class PizzaExtensions
             { Count: _ } => "It's layered with "
         };
         builder.Append(toppings);
-        builder.AppendCollection(pizza.Toppings);
+        builder.AppendCollection(pizza.Toppings, t => t.ToString().ToLower());
         builder.AppendLine(".");
 
         const decimal deliveryCharge = 2.50m;
@@ -61,10 +61,8 @@ static class PizzaExtensions
     private static StringBuilder AppendCollection<T>(
         this StringBuilder builder,
         ICollection<T> source,
-        Func<T, string> format = null)
+        Func<T, string> format)
     {
-        format ??= (item) => item.ToString().ToLower();
-
         var array = source.ToArray();
         for (int i = 0; i < array.Length; ++ i)
         {
