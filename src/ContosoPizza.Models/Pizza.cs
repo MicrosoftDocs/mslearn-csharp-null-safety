@@ -2,7 +2,7 @@
 
 public sealed record class Pizza([Required] string Name)
 {
-    private ICollection<PizzaCheese>? _cheeses = null!;
+    private ICollection<PizzaCheese>? _cheeses;
 
     public int Id { get; set; }
 
